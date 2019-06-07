@@ -26,3 +26,6 @@ This app will allow coaches to choose their team members from the existing bench
 * [ ] Coach page
 * [ ] Update page
 * [ ] Team page
+
+### Models
+* [ ] Team model file
