@@ -1,5 +1,13 @@
 module.exports = {
-
+  client: 'mysql',
+  connection: {
+    host: 'localhost',
+    port: 3306,
+    user: 'nodeUser',
+    password: '',
+    database: 'soccer_db',
+    debug: ['ComQueryPacket', 'RowDataPacket']
+  },
   development: {
     client: 'mysql',
     connection: {
