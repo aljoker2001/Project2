@@ -9,7 +9,7 @@ class API {
   constructor (someDefault = 'defaultVal') {
     this.someDefault = someDefault
   }
-
+  /* eslint-disable no-undef */
   saveExample (example) {
     return fetch('api/examples', {
       method: 'POST',
