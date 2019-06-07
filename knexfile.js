@@ -7,7 +7,7 @@ module.exports = {
       port: 3306,
       user: 'nodeUser',
       password: '',
-      database: 'exampledb',
+      database: 'soccer_db',
       debug: ['ComQueryPacket', 'RowDataPacket']
     }
   },
@@ -19,7 +19,7 @@ module.exports = {
       port: 3306,
       user: 'nodeUser',
       password: '',
-      database: 'testdb',
+      database: 'soccer_db',
       debug: ['ComQueryPacket', 'RowDataPacket']
     }
   },
@@ -31,7 +31,7 @@ module.exports = {
       port: 3306,
       user: 'nodeUser',
       password: '',
-      database: 'exampledb'
+      database: 'soccer_db'
     }
   }
 }
