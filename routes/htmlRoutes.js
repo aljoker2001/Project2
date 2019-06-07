@@ -1,5 +1,6 @@
 // Dependecies
 const Team = require('../models/example')
+const path = require('path')
 
 /**
  * htmlRoutes: This routes file renders views e.g. handlebars pages
@@ -10,35 +11,50 @@ const Team = require('../models/example')
 module.exports = function (app) {
   // Load index page
   app.get('/', function (req, res) {
-    Team.findAll({})
-      .then(function (dbExamples) {
-        res.render('index', {
-          msg: 'Welcome!',
-          examples: dbExamples
-        })
+    res.sendFile(path.join(__dirname, '../public/html/index.html'))
+    Team.findAll()
+      .then(results => {
       })
   })
 
-  // Load example page and pass in an example by id
-  app.get('/example/:id', function (req, res) {
-    Team.findOne({ where: { id: req.params.id } })
-      .then(function (dbExample) {
-        res.render('example', {
-          example: dbExample
-        })
-      })
+  // Load page where coach builds the team and checks the weather
+  app.get('/coach', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/html/coach.html'))
+    // Team.findOne(req.params.id)
+    //   .then(results => {
+    //   })
+  })
+
+  // Load page to update the roster
+  app.get('/update', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/html/update.html'))
+    // Team.findOne(req.body)
+    //   .then(results => {
+    //   })
   })
 
   // Load team statistics page
-  app.get('/statistics', function (req, res) {
+  app.get('/team', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/html/team.html'))
     Team.findAll()
       .then(results => {
         console.log(results)
-        res.json(results)
+      })
+  })
+
+  app.post('/', function (req, res) {
+    var player = req.body
+    Team.addPlayer(player)
+      .then(results => {
+        console.log(`
+        ********
+        Team.addPlayer()
+        ${results}`)
+        res.json(player)
       })
   })
   // Render 404 page for any unmatched routes
-  app.get('*', function (req, res) {
-    res.render('404')
-  })
+  // app.get('*', function (req, res) {
+  //   res.render('404')
+  // })
 }

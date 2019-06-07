@@ -5,7 +5,7 @@
 require('dotenv').config()
 
 const express = require('express')
-const exphbs = require('express-handlebars')
+// const exphbs = require('express-handlebars')
 /* eslint-disable no-unused-vars */
 const db = require('./models/example')
 
@@ -19,13 +19,13 @@ app.use(express.json())
 app.use(express.static('public'))
 
 // Handlebars
-app.engine(
-  'handlebars',
-  exphbs({
-    defaultLayout: 'main'
-  })
-)
-app.set('view engine', 'handlebars')
+// app.engine(
+//   'handlebars',
+//   exphbs({
+//     defaultLayout: 'main'
+//   })
+// )
+// app.set('view engine', 'handlebars')
 
 // Routes
 require('./routes/apiRoutes')(app)

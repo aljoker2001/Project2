@@ -12,7 +12,7 @@ const knex = require('../config/connection.js')
  * @class Example
  */
 class Team {
-  constructor (table = 'example') {
+  constructor (table = 'players') {
     this.table = table
   }
 
@@ -34,7 +34,7 @@ class Team {
  * @returns Promise
  * @memberof Example
  */
-  create (values) {
+  addPlayer (values) {
     return knex(this.table)
       .returning('id')
       .insert(values)
