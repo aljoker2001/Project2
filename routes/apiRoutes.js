@@ -25,7 +25,9 @@ module.exports = function (app) {
       })
   })
 
-  app.post('/api/current', function (req, res) {
+  // Updates current players most recent statistics
+  app.put('/api/current', function (req, res) {
+    console.log(req.body)
     Team.update(req.body)
       .then(results => {
         console.log(`

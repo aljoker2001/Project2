@@ -34,6 +34,19 @@ class Team {
       .where('on_team', true)
   }
 
+  // Updates statistics for players who were selected for the team
+  update (values) {
+    return knex(this.table)
+      .where('id', values.id)
+      .update({
+        goals: knex.raw(`?? + ${values.goals}`, ['goals']),
+        assists: knex.raw(`?? + ${values.assists}`, ['assists']),
+        mins: knex.raw(`?? + ${values.mins}`, ['mins']),
+        yel: knex.raw(`?? + ${values.yel}`, ['yel']),
+        red: knex.raw(`?? + ${values.red}`, ['red'])
+      })
+  }
+
   /**
  * create a new record
  *
@@ -50,7 +63,7 @@ class Team {
   onTeam (id) {
     var query = knex(this.table)
       .where('id', id)
-    var boolean = knex.select('on_team').table.where('id', id)
+    var boolean = knex.select('on_team').table(this.table).where('id', id)
     if (boolean) {
       return query.update('on_team', false)
     } else {
