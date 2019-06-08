@@ -4,8 +4,13 @@ exports.up = function (knex, Promise) {
     table.string('name').notNullable()
     table.integer('jersey_number').notNullable()
     table.string('position').notNullable()
-    table.integer('games_played').notNullable()
-    table.integer('goals').notNullable()
+    table.integer('games_played').nullable()
+    table.integer('mins').nullable()
+    table.integer('goals').nullable()
+    table.integer('assists').nullable()
+    table.integer('yel').nullable()
+    table.integer('red').nullable()
+    table.boolean('on_team')
   })
 }
 
