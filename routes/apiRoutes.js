@@ -17,10 +17,34 @@ module.exports = function (app) {
       })
   })
 
-  // Create a new example
-  app.post('/api/examples', function (req, res) {
-    Team.create(req.body)
+  // Get the current players on the team
+  app.get('/api/current', function (req, res) {
+    Team.currentTeam()
       .then(results => {
+        res.json(results)
+      })
+  })
+
+  app.post('/api/current', function (req, res) {
+    Team.update(req.body)
+      .then(results => {
+        console.log(`
+        **************
+        Team.update(${req.body}):
+        ${results}`)
+        res.json(results)
+      })
+  })
+
+  // Create a new player for the team
+  app.post('/api/team', function (req, res) {
+    var player = req.body
+    Team.addPlayer(player)
+      .then(results => {
+        console.log(`
+        ********
+        Team.addPlayer()
+        ${results}`)
         res.json(results)
       })
   })
