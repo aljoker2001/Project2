@@ -27,6 +27,13 @@ class Team {
       .table(this.table)
   }
 
+  // Selects all players who are on the current team
+  currentTeam () {
+    return knex.select()
+      .table(this.table)
+      .where('on_team', true)
+  }
+
   /**
  * create a new record
  *
@@ -40,6 +47,17 @@ class Team {
       .insert(values)
   }
 
+  onTeam (id) {
+    var query = knex(this.table)
+      .where('id', id)
+    var boolean = knex.select('on_team').table.where('id', id)
+    if (boolean) {
+      return query.update('on_team', false)
+    } else {
+      return query.update('on_team', true)
+    }
+  }
+
   /**
    * delete 1 or more records by criteria
    *
@@ -47,9 +65,9 @@ class Team {
    * @returns Promise
    * @memberof Example
    */
-  destroy (where) {
+  removePlayer (id) {
     return knex(this.table)
-      .where(where)
+      .where('id', id)
       .del()
   }
 }
