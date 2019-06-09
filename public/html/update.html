@@ -10,12 +10,17 @@
     <title>Post-Game Stats</title>
 </head>
 
-<body>
+<body background="../images/vienna-reyes-616732-unsplash.jpg">
     <div class="container">
-        <nav>
-            <ul class="nav justify-content-end">
+        <div class="jumbotron pt-0">
+        <nav class="pb-5">
+            <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Registration</a>
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <span class="mt-2">|</span>
+                <li class="nav-item">
+                    <a class="nav-link" href="/registration">Registration</a>
                 </li>
                 <span class="mt-2">|</span>
                 <li class="nav-item">
@@ -31,17 +36,24 @@
                 </li>
             </ul>
         </nav>
-        <h1 class="text-center">Post-Game Statistics</h1>
-        <div class="dropdown d-flex justify-content-center">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Choose a Player
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <h1 class="text-center">Post-Game Statistics</h1>
+            <div class="dropdown d-flex justify-content-center">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Choose a Player
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                </div>
             </div>
         </div>
         <div class="col d-flex flex-wrap justify-content-center" id="playerDisplay">
         </div>
+        <section class="center mw7 hidden pv4 mb2">
+            <nav class="mb-4">
+                <a href="/api/current" class="link">API Current Team</a> | <a href="/api/team" class="link">API Entire Team</a> | <a
+                    href="https://github.com/aljoker2001/Project2" class="link" target="_blank">GitHub Repo</a>
+            </nav>
+        </section>
     </div>
 </body>
 <script src="../js/update.js"></script>

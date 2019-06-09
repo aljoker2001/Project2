@@ -27,22 +27,49 @@ var showPlayer = (data) => {
       console.log(data)
       for (let player of results) {
         if (data.target.innerHTML === player.name) {
-          var playerSection = `<div class ="m-2 col-3 d-flex flex-wrap bg-dark justify-content-center" id ="player${player.id}">
-                  <h2 class="text-light">${player.name} <strong>${player.jersey_number}</strong></h2>
-                  <form class="text-light col-12 justify-content-center d-flex flex-wrap">
-                  <span class="col-12 d-flex justify-content-center">Minutes Played:</span><br>
-                  <input type:"number"><br>
-                  <span class="col-12 d-flex justify-content-center">Goals Scored:</span><br>
-                  <input type:"number"><br>
-                  <span class="col-12 d-flex justify-content-center">Assists:</span><br>
-                  <input type:"number"><br>
-                  <span class="col-12 d-flex justify-content-center">Yellow Cards:</span><br>
-                  <input type:"number"><br>
-                  <span class="col-12 d-flex justify-content-center">Red Cards:</span><br>
-                  <input type:"number"><br>
+          // var playerSection = `<div class ="m-2 col-4 d-flex flex-wrap bg-dark justify-content-center" id ="player${player.id}">
+          //         <h2 class="text-light">${player.name} | <strong>${player.jersey_number}</strong></h2>
+          //         <form class="text-light col-12 justify-content-center d-flex flex-wrap">
+          //         <label class="col-12 d-flex justify-content-center">Minutes Played:</label><br>
+          //         <input type:"number"><br>
+          //         <label class="col-12 d-flex justify-content-center">Goals Scored:</label><br>
+          //         <input type:"number"><br>
+          //         <label class="col-12 d-flex justify-content-center">Assists:</label><br>
+          //         <input type:"number"><br>
+          //         <label class="col-12 d-flex justify-content-center">Yellow Cards:</label><br>
+          //         <input type:"number"><br>
+          //         <label class="col-12 d-flex justify-content-center">Red Cards:</label><br>
+          //         <input type:"number"><br>
+          //         </form>
+          //         <button type="button" id="${player.id}" class="btn btn-primary my-2">Submit</button>
+          //         </div>`
+
+          var playerSection = `  <div class="card mb-3 bg-dark" style = "max-width: 540px;" >
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="..." class="card-img" alt="...">
+    </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title text-light">${player.name} | <strong>${player.jersey_number}</strong></h5>
+                      <form class="text-light col-12 justify-content-center d-flex flex-wrap">
+                        <label class="col-12 d-flex justify-content-center">Minutes Played:</label><br>
+                          <input type: "number"><br>
+                            <label class="col-12 d-flex justify-content-center">Goals Scored:</label><br>
+                              <input type: "number"><br>
+                                <label class="col-12 d-flex justify-content-center">Assists:</label><br>
+                                  <input type: "number"><br>
+                                    <label class="col-12 d-flex justify-content-center">Yellow Cards:</label><br>
+                                      <input type: "number"><br>
+                                        <label class="col-12 d-flex justify-content-center">Red Cards:</label><br>
+                                          <input type: "number"><br>
                   </form>
                   <button type="button" id="${player.id}" class="btn btn-primary my-2">Submit</button>
-                  </div>`
+                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>`
           display.insertAdjacentHTML('afterbegin', playerSection)
         }
       }
