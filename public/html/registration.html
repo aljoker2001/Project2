@@ -17,17 +17,22 @@
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
                     <h1 class="display-4">Registration Page</h1>
-                    <p class="lead">Please fill in the form below to register!</p>
+                    <p class="lead">Fill in the form below to register!</p>
                 </div>
             </div>
         </center>
         <div class="row">
-            <div class="col-6">
+            <div class="col">
                 <form>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Name</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                        <input type="text" class="form-control" id="name" placeholder="Name" class="form-control" required>
                     </div>
+                    <div class="form-group">
+                            <label for="exampleInputPassword1">Photo</label>
+                            <input type="text" class="form-control" id="photo" placeholder="Image URL" class="form-control" required>
+                    </div>
+                    Desired Position <br>
                     <div class="dropdown">
                         <select class="chosen-select">
                             <option value="Goalkeeper">Goalkeeper</option>
@@ -38,27 +43,27 @@
                         </select>
                     </div><br>
                         <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Submit</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="submit" aria-hidden="true">Submit</button>
 
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
+                            <div class="modal-dialog">
 
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Registered!</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>Thank you for registering.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                            </div>
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Registered!</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                <div class="modal-body">
+                                    <p>Thank you for registering.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
 
-                        </div>
+                            </div>
                         </div>
                 </form>
             </div>
