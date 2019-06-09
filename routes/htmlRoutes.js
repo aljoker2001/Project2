@@ -17,6 +17,11 @@ module.exports = function (app) {
       })
   })
 
+  // Loads registration page
+  app.get('/registration', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/html/registration.html'))
+  })
+
   // Load page where coach builds the team and checks the weather
   app.get('/coach', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/html/coach.html'))
