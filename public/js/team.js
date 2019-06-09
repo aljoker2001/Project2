@@ -29,7 +29,7 @@ window.onload = function () {
 // html to display as table
 function createNewRow (players) {
   let newInputRow = `
-       <tr><td>${players.name}</td>
+       <tr><td><img src="${players.image}" height="115px" width="100px"> ${players.name}</td>
        <td>${players.jersey_number}</td>
        <td>${players.position}</td>
        <td>${players.games_played}</td>
