@@ -57,7 +57,12 @@ class Team {
   addPlayer (values) {
     return knex(this.table)
       .returning('id')
-      .insert(values)
+      .insert({
+        name: values.name,
+        image: values.image,
+        jersey_number: '99',
+        position: values.position
+      })
   }
 
   onTeam (id) {
