@@ -60,7 +60,7 @@ class Team {
       .insert({
         name: values.name,
         image: values.image,
-        jersey_number: '99',
+        jersey_number: values.jersey_number,
         position: values.position
       })
   }
