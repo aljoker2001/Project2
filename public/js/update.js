@@ -1,5 +1,9 @@
 var display = document.querySelector('#playerDisplay')
 var dropdown = document.querySelector('.dropdown-menu')
+var modalButton
+var modalTitle = document.querySelector('.modal-title')
+var modalBody = document.querySelector('.modal-body')
+
 /* eslint-disable no-undef */
 fetch('/api/current')
   .then(response => response.json())
@@ -27,30 +31,13 @@ var showPlayer = (data) => {
       console.log(data)
       for (let player of results) {
         if (data.target.innerHTML === player.name) {
-          // var playerSection = `<div class ="m-2 col-4 d-flex flex-wrap bg-dark justify-content-center" id ="player${player.id}">
-          //         <h2 class="text-light">${player.name} | <strong>${player.jersey_number}</strong></h2>
-          //         <form class="text-light col-12 justify-content-center d-flex flex-wrap">
-          //         <label class="col-12 d-flex justify-content-center">Minutes Played:</label><br>
-          //         <input type:"number"><br>
-          //         <label class="col-12 d-flex justify-content-center">Goals Scored:</label><br>
-          //         <input type:"number"><br>
-          //         <label class="col-12 d-flex justify-content-center">Assists:</label><br>
-          //         <input type:"number"><br>
-          //         <label class="col-12 d-flex justify-content-center">Yellow Cards:</label><br>
-          //         <input type:"number"><br>
-          //         <label class="col-12 d-flex justify-content-center">Red Cards:</label><br>
-          //         <input type:"number"><br>
-          //         </form>
-          //         <button type="button" id="${player.id}" class="btn btn-primary my-2">Submit</button>
-          //         </div>`
-
           var playerSection = `  <div class="card mb-3 bg-dark" style = "max-width: 540px;" >
                   <div class="row no-gutters">
                   <div class="col-md-4 m-auto">
                   <img src="${player.image}" class="card-img ml-3" alt="${player.name}">
                   </div>
                   <div class="col-md-8">
-                  <div class="card-body pb-0">
+                  <div class="card-body pb-0 pr-0">
                   <h5 class="card-title text-light">${player.name} | <strong>${player.jersey_number}</strong></h5>
                   <form class="text-light col-12 justify-content-center d-flex flex-wrap">
                   <label class="col-12 d-flex justify-content-center">Minutes Played:</label><br>
@@ -64,24 +51,31 @@ var showPlayer = (data) => {
                   <label class="col-12 d-flex justify-content-center">Red Cards:</label><br>
                   <input type: "number"><br>
                   </form>
-                  <button type="button" id="${player.id}" class="btn btn-primary my-3">Submit</button>
+                  <button type="button" id="${player.id}" class="btn btn-primary my-3" data-toggle="modal" data-target="#myModal">Submit</button>
                   </div>
                   </div>
                   </div>
                   </div>
                   </div>`
           display.insertAdjacentHTML('afterbegin', playerSection)
+          modalButton = document.getElementById(player.id)
         }
       }
     })
 }
 
 var updateStats = (data) => {
+  console.log(modalButton)
+  modalTitle.innerHTML = 'Updated!'
+  modalBody.innerHTML = 'Stats have been registered.'
+  // modalButton.setAttribute('data-toggle', 'modal')
   console.log(`This is button ${data.target.id}`)
   console.log(data)
   for (let val of data.target.previousElementSibling) {
-    if (isNaN(val.value)) {
-      alert('All values must be numbers.')
+    if (isNaN(val.value) || val.value === '') {
+      modalTitle.innerHTML = '<i class="far fa-frown fa-3x"></i>'
+      modalBody.innerHTML = 'Please complete every field with a number'
+      // modalButton.setAttribute('data-toggle', '')
       return false
     }
   }
