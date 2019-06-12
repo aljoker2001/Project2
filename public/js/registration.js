@@ -11,19 +11,18 @@ var addPlayer = (event) => {
     position: form.childNodes[9].childNodes[1].value.trim()
   }
   console.log(newPlayer)
+  /* eslint-disable no-undef */
   if (isNaN(newPlayer.jersey_number)) {
     $('#errorNum').modal('show')
   } else if (newPlayer.name === '' || newPlayer.image === '' || newPlayer.position === '' || newPlayer.jersey_number === '' || newPlayer.jersey_number === '') {
     $('#errorModal').modal('show')
   }
   if (newPlayer.name !== '' && newPlayer.image !== '' && newPlayer.position !== '' && newPlayer.jersey_number !== '' && newPlayer.jersey_number !== '' && !isNaN(newPlayer.jersey_number)) {
-  /* eslint-disable no-undef */
     fetch('/api/team', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newPlayer)
     })
-    /* eslint-enable no-undef */
       .then(results => {
         console.log(results)
       })
@@ -33,6 +32,7 @@ var addPlayer = (event) => {
     form.childNodes[9].childNodes[1].value = ''
     // show modal
     $('#myModal').modal('show')
+    /* eslint-enable no-undef */
   }
 }
 
