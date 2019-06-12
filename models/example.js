@@ -88,6 +88,11 @@ class Team {
       .where('id', id)
       .del()
   }
+
+  reset () {
+    return knex(this.table)
+      .truncate()
+  }
 }
 
 module.exports = new Team()

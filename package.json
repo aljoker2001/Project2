@@ -6,9 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "localstart": "nodemon server.js",
-    "lint": "standard --verbose | snazzy",
+    "lint": "standard --global describe --global fetch --global alert --global beforeEach --verbose | snazzy",
     "fix": "standard --fix .",
-    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "pretest": "knex migrate:latest --env staging",
+    "test": "npm run lint && cross-env NODE_ENV=staging mocha -u tdd --reporter spec --exit"
   },
   "license": "ISC",
   "dependencies": {
@@ -27,5 +28,21 @@
     "standard": "^12.0.1",
     "nodemon": "^1.19.1",
     "mocha": "^6.1.4"
+  },
+  "standard": {
+    "ignore": [
+      "/seeds",
+      "/migrations",
+      "/test/*.js",
+      "tmp.js"
+    ],
+    "global": [
+      "describe",
+      "it",
+      "beforeEach",
+      "fetch",
+      "const",
+      "alert"
+    ]
   }
 }

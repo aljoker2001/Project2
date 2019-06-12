@@ -1,3 +1,4 @@
+/* global fetch */
 window.onload = function () {
   var $playerContainer = document.querySelector('#players-container')
   // initial players array

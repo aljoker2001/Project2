@@ -31,7 +31,7 @@ var showPlayer = (data) => {
       console.log(data)
       for (let player of results) {
         if (data.target.innerHTML === player.name) {
-          var playerSection = `  <div class="card mb-3 bg-dark" style = "max-width: 540px;" >
+          var playerSection = `  <div class="card mb-3 bg-secondary" style = "max-width: 540px;" >
                   <div class="row no-gutters">
                   <div class="col-md-4 m-auto">
                   <img src="${player.image}" class="card-img ml-3" alt="${player.name}">
@@ -51,7 +51,7 @@ var showPlayer = (data) => {
                   <label class="col-12 d-flex justify-content-center">Red Cards:</label><br>
                   <input type: "number"><br>
                   </form>
-                  <button type="button" id="${player.id}" class="btn btn-primary my-3" data-toggle="modal" data-target="#myModal">Submit</button>
+                  <button type="button" id="${player.id}" class="btn btn-dark my-3" data-toggle="modal" data-target="#myModal">Submit</button>
                   </div>
                   </div>
                   </div>

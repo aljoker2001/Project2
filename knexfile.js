@@ -1,19 +1,10 @@
 module.exports = {
-  client: 'mysql',
-  connection: {
-    host: 'localhost',
-    port: 3306,
-    user: 'newuser',
-    password: '',
-    database: 'soccer_db',
-    debug: ['ComQueryPacket', 'RowDataPacket']
-  },
   development: {
     client: 'mysql',
     connection: {
       host: 'localhost',
       port: 3306,
-      user: 'newuser',
+      user: 'nodeUser',
       password: '',
       database: 'soccer_db',
       debug: ['ComQueryPacket', 'RowDataPacket']
@@ -25,9 +16,9 @@ module.exports = {
     connection: {
       host: 'localhost',
       port: 3306,
-      user: 'newuser',
+      user: 'nodeUser',
       password: '',
-      database: 'soccer_db',
+      database: 'test_db',
       debug: ['ComQueryPacket', 'RowDataPacket']
     }
   },
@@ -37,7 +28,7 @@ module.exports = {
     connection: {
       host: process.env.DATABASE_URL,
       port: 3306,
-      user: 'newuser',
+      user: 'nodeUser',
       password: '',
       database: 'soccer_db'
     }
