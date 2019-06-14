@@ -17,6 +17,14 @@ module.exports = function (app) {
       })
   })
 
+  // Get sum of each position
+  app.get('/api/position', function (req, res) {
+    Team.findPosition()
+      .then(results => {
+        res.json(results)
+      })
+  })
+
   // Get the current players on the team
   app.get('/api/current', function (req, res) {
     Team.currentTeam()
