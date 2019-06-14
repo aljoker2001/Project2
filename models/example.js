@@ -22,6 +22,16 @@ class Team {
    * @returns Promise
    * @memberof Example
    */
+
+  // Count number of each position
+  findPosition () {
+    return knex.select('position')
+      .count('*')
+      .from(this.table)
+      .groupBy('position')
+  }
+
+  // Find all in table
   findAll () {
     return knex.select()
       .table(this.table)
