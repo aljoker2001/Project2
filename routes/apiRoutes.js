@@ -38,6 +38,19 @@ module.exports = function (app) {
       })
   })
 
+  // Add player from bench to the current team
+  app.put('/api/team', function (req, res) {
+    console.log('test', req.body)
+    Team.addToTeam({ id: req.body.id }, { on_team: req.body.on_team })
+      .then(results => {
+        console.log(`
+        *************
+        Team.addToTeam(${req.body}):
+        ${results}`)
+        res.json(results)
+      })
+  })
+
   // Create a new player for the team
   app.post('/api/team', function (req, res) {
     var player = req.body
