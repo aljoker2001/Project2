@@ -18,7 +18,7 @@ module.exports = {
       port: 3306,
       user: 'nodeUser',
       password: '',
-      database: 'test_db',
+      database: 'testdb',
       debug: ['ComQueryPacket', 'RowDataPacket']
     }
   },
