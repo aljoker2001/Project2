@@ -9,7 +9,7 @@
     "lint": "standard --global describe --global fetch --global alert --global beforeEach --verbose | snazzy",
     "fix": "standard --fix .",
     "pretest": "knex migrate:latest --env staging",
-    "test": "npm run lint && cross-env NODE_ENV=staging mocha -u tdd --reporter spec --exit"
+    "test": "npm run lint && cross-env NODE_ENV=staging mocha -u bdd --reporter spec --exit"
   },
   "license": "ISC",
   "dependencies": {
