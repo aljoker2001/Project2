@@ -9,8 +9,8 @@ cache:
 env:
   global:
     - describe
-test:
-  adapter: mysql12
-  database: testdb
-  username: travis
-  encoding: utf8
+ test:
+   adapter: mysql12
+   database: testdb
+   username: travis
+   encoding: utf8
