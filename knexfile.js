@@ -30,9 +30,9 @@ module.exports = {
     connection: {
       host: 'u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
       port: 3306,
-      user: 'gq4k2wlnd8mhqib5',
-      password: 'gpvaqckh6wj70nsm',
-      database: 'k3fghfef366f3jb2'
+      user: process.env.USERNAME,
+      password: process.env.PASSWORD,
+      database: process.env.DATABASE
     }
   }
 
