@@ -21,7 +21,7 @@ window.onload = function () {
   var strikers = []
 
   var midfielders = []
-  var teamPlayers
+
   fetch('/api/team')
     .then(response => response.json())
     .then(data => {

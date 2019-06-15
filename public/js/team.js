@@ -38,6 +38,7 @@ window.onload = function () {
         console.log(positionArray[0][('count(*)')])
         console.log(Object.getOwnPropertyNames(positionArray[0]))
         // pie chart
+        /* eslint-disable no-unused-vars, no-undef */
         var myChart = new Chart(ctx, {
           type: 'pie',
           data: {

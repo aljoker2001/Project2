@@ -14,13 +14,13 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'mysql',
     connection: {
       host: 'localhost',
       port: 3306,
       user: 'nodeUser',
       password: '',
-      database: 'testdb',
+      database: 'test_db',
       debug: ['ComQueryPacket', 'RowDataPacket']
     }
   },
