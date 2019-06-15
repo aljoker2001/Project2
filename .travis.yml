@@ -6,3 +6,11 @@ branches:
 cache:
   directories:
     - node_modules
+env:
+  global:
+    - describe
+test:
+  adapter: mysql12
+  database: testdb
+  username: travis
+  encoding: utf8

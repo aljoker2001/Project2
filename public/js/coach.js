@@ -1,3 +1,4 @@
+
 window.onload = function () {
   var dropdownData = []
   var strikersD = document.querySelectorAll('.strikers')
@@ -21,6 +22,8 @@ window.onload = function () {
   var strikers = []
 
   var midfielders = []
+  /* eslint-disable no-unused-vars */
+
   var teamPlayers
   fetch('/api/team')
     .then(response => response.json())
