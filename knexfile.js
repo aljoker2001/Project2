@@ -1,3 +1,5 @@
+// Update with your config settings.
+
 module.exports = {
   development: {
     client: 'mysql',
@@ -12,7 +14,7 @@ module.exports = {
   },
 
   staging: {
-    client: 'mysql',
+    client: 'postgresql',
     connection: {
       host: 'localhost',
       port: 3306,
@@ -24,7 +26,7 @@ module.exports = {
   },
 
   production: {
-    client: 'mysql',
+    client: 'postgresql',
     connection: {
       host: process.env.DATABASE_URL,
       port: 3306,
@@ -33,4 +35,5 @@ module.exports = {
       database: 'soccer_db'
     }
   }
+
 }

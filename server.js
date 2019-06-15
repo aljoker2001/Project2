@@ -3,6 +3,9 @@
 // *********************************************************************************
 
 require('dotenv').config()
+// var key = require('./key')
+// console.log(process.env.APIXU_KEY)
+// const apixu = process.env.APIXU_KEY
 
 const express = require('express')
 // const exphbs = require('express-handlebars')
@@ -30,6 +33,8 @@ app.use(express.static('public'))
 // Routes
 require('./routes/apiRoutes')(app)
 require('./routes/htmlRoutes')(app)
+
+// require('./public/js/coach')(apixu)
 
 // Starting our Express app
 // =============================================================

@@ -13,113 +13,166 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Welcome to the team builder page!</h1>
-        <div class="d-flex flex-wrap">
-            <div class="dropdown my-5 d-flex flex-wrap col-6 justify-content-center">
-                <label class="col-12 text-center">Striker 1</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu strikers" aria-labelledby="dropdownMenuButton">
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#095921; opacity: 0.7; font-weight: bold;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/registration">Registration</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Coach Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/update">Post-Game Updates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/team">Team Stats</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="transbox">
+        <div class="container">
+            <h1>Welcome to the team builder page!</h1>
+            <div class="d-flex flex-wrap">
+                <div class="dropdown my-5 d-flex flex-wrap col-6 justify-content-center">
+                    <label class="col-12 text-center">Striker 1</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu strikers" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-6 justify-content-center">
-                <label class="col-12 text-center">Striker 2</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu strikers" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-6 justify-content-center">
+                    <label class="col-12 text-center">Striker 2</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu strikers" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
-                <label class="col-12 text-center">Forward 1</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu forwards" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
+                    <label class="col-12 text-center">Forward 1</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu forwards" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
-                <label class="col-12 text-center">Forward 2</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu forwards" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
+                    <label class="col-12 text-center">Forward 2</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu forwards" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
-                <label class="col-12 text-center">Forward 3</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu forwards" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
+                    <label class="col-12 text-center">Forward 3</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu forwards" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
-                <label class="col-12 text-center">Midfielder 1</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu midfielders" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
+                    <label class="col-12 text-center">Midfielder 1</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu midfielders" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
-                <label class="col-12 text-center">Midfielder 2</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu midfielders" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
+                    <label class="col-12 text-center">Midfielder 2</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu midfielders" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
-                <label class="col-12 text-center">Midfielder 3</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu midfielders" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-4 justify-content-center">
+                    <label class="col-12 text-center">Midfielder 3</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu midfielders" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-6 justify-content-center">
-                <label class="col-12 text-center">Defender 1</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu defenders" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-6 justify-content-center">
+                    <label class="col-12 text-center">Defender 1</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu defenders" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-6 justify-content-center">
-                <label class="col-12 text-center">Defender 2</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu defenders" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-6 justify-content-center">
+                    <label class="col-12 text-center">Defender 2</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu defenders" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown my-5 d-flex flex-wrap col-12 justify-content-center">
-                <label class="col-12 text-center">Goalkeeper</label>
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose a Player
-                </button>
-                <div class="dropdown-menu goalkeeper" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown my-5 d-flex flex-wrap col-12 justify-content-center">
+                    <label class="col-12 text-center">Goalkeeper</label>
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a Player
+                    </button>
+                    <div class="dropdown-menu goalkeeper" aria-labelledby="dropdownMenuButton">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- weather -->
+    <div class="transbox">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h1>Weather Forecast</h1>
+                    <input type="text" id="search-term" placeholder="Enter Location">
+                    <button type="submit" class="btn btn-primary btn-xs" id="run-search">SEARCH</button>
+                    <div id='alert'></div>
+                    <div id="display"></div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <center>
+        <div class="blockquote-footer">
+            <section class="center mw7 hidden pv4 mb2">
+                <nav class="mb-4">
+                    <a href="/api/current" class="link">API Current Team</a> | <a href="/api/team" class="link">API
+                        Entire
+                        Team</a> |
+                    <a href="https://github.com/aljoker2001/Project2" class="link" target="_blank">GitHub Repo</a>
+                </nav>
+            </section>
+        </div>
+    </center>
 
 </body>
-<script src="../js/dropdown.js"></script>
+<script src="../js/coach.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
     integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -128,5 +181,28 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+<style>
+    .transbox {
+        margin: 30px;
+        background-color: #ffffff;
+        opacity: 0.88;
+        filter: alpha(opacity=60);
+        padding: 40px;
+        resize: both;
+        overflow: auto;
+        border: 1px solid black;
+        height: 600px;
+    }
+
+    body {
+        background-image: url("../images/coach.png");
+        background-color: black;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+    }
+</style>
 
 </html>
