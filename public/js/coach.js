@@ -158,7 +158,7 @@ window.onload = function () {
       return
     }
     console.log(`Location: ${location}`)
-    var url = `http://api.apixu.com/v1/forecast.json?key=15f967ddf5344e2bb0e25104190706&q=${location}&days=7`
+    var url = `https://api.apixu.com/v1/forecast.json?key=15f967ddf5344e2bb0e25104190706&q=${location}&days=7`
     console.log(url)
     var display = document.getElementById('display')
 

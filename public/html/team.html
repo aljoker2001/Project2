@@ -95,7 +95,7 @@
       .then(results => results.json())
       .then(function (result) {
         positionArray = result
-        console.log(positionArray)
+        console.log('position array', positionArray)
         console.log(positionArray[0][('count(*)')])
         console.log(Object.getOwnPropertyNames(positionArray[0]))
         // pie chart
