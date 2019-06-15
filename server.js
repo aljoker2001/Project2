@@ -3,9 +3,9 @@
 // *********************************************************************************
 
 require('dotenv').config()
-var key = require('./key')
-console.log(process.env.APIXU_KEY)
-const apixu = process.env.APIXU_KEY
+// var key = require('./key')
+// console.log(process.env.APIXU_KEY)
+// const apixu = process.env.APIXU_KEY
 
 const express = require('express')
 // const exphbs = require('express-handlebars')

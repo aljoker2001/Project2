@@ -17,6 +17,14 @@ module.exports = function (app) {
       })
   })
 
+  // Get sum of each position
+  app.get('/api/position', function (req, res) {
+    Team.findPosition()
+      .then(results => {
+        res.json(results)
+      })
+  })
+
   // Get the current players on the team
   app.get('/api/current', function (req, res) {
     Team.currentTeam()
@@ -33,6 +41,19 @@ module.exports = function (app) {
         console.log(`
         **************
         Team.update(${req.body}):
+        ${results}`)
+        res.json(results)
+      })
+  })
+
+  // Add player from bench to the current team
+  app.put('/api/team', function (req, res) {
+    console.log('test', req.body)
+    Team.addToTeam({ id: req.body.id }, { on_team: req.body.on_team })
+      .then(results => {
+        console.log(`
+        *************
+        Team.addToTeam(${req.body}):
         ${results}`)
         res.json(results)
       })

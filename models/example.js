@@ -22,6 +22,16 @@ class Team {
    * @returns Promise
    * @memberof Example
    */
+
+  // Count number of each position
+  findPosition () {
+    return knex.select('position')
+      .count('*')
+      .from(this.table)
+      .groupBy('position')
+  }
+
+  // Find all in table
   findAll () {
     return knex.select()
       .table(this.table)
@@ -57,24 +67,28 @@ class Team {
   addPlayer (values) {
     return knex(this.table)
       .returning('id')
-      .insert({
-        name: values.name,
-        image: values.image,
-        jersey_number: values.jersey_number,
-        position: values.position
-      })
+      .insert(values)
   }
 
-  onTeam (id) {
-    var query = knex(this.table)
-      .where('id', id)
-    var boolean = knex.select('on_team').table(this.table).where('id', id)
-    if (boolean) {
-      return query.update('on_team', false)
-    } else {
-      return query.update('on_team', true)
-    }
+  // onTeam (name) {
+  //   return knex.select()
+  //     .table(this.table)
+  //     .where('name', name.name)
+  // }
+
+  addToTeam (where, values) {
+    return knex(this.table).where(where)
+      .update(values)
   }
+
+  // var query = knex(this.table).where('name', name.name)
+  // var boolean = this.onTeam(name)
+  // console.log(boolean)
+  // if (boolean) {
+  //   return query.update('on_team', false)
+  // } else {
+  //   return query.update('on_team', true)
+  // }
 
   /**
    * delete 1 or more records by criteria

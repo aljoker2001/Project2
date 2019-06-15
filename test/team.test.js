@@ -14,6 +14,7 @@ var request
 describe('GET /api/examples', function () {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
+  // this.timeout(15000)
   beforeEach(function () {
     request = chai.request(server)
     return Example.reset()
