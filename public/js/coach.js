@@ -1,3 +1,4 @@
+
 window.onload = function () {
   var dropdownData = []
   var strikersD = document.querySelectorAll('.strikers')
@@ -10,6 +11,7 @@ window.onload = function () {
 
   var goalkeepersD = document.querySelectorAll('.goalkeeper')
   var display = document.querySelector('.container')
+  var currentTeam = document.querySelector('#onTeam')
   var positions = {}
   var forwards = []
 
@@ -20,6 +22,9 @@ window.onload = function () {
   var strikers = []
 
   var midfielders = []
+  /* eslint-disable no-unused-vars */
+
+  var teamPlayers
   fetch('/api/team')
     .then(response => response.json())
     .then(data => {
@@ -31,6 +36,22 @@ window.onload = function () {
       console.log('strikers', strikers)
       console.log('midfielders', midfielders)
     })
+
+  var showCurrentTeam = () => {
+    currentTeam.innerHTML = ''
+    fetch('/api/current')
+      .then(response => response.json())
+      .then(data => {
+        console.log('current team', data)
+        for (let player of data) {
+          var item = document.createElement('li')
+          item.innerHTML = `${player.name} <strong>(${player.position})</strong>`
+          currentTeam.append(item)
+        }
+      })
+  }
+
+  showCurrentTeam()
 
   var createDropdowns = (data) => {
     dropdownData = []
@@ -113,6 +134,7 @@ window.onload = function () {
       })
         .then(results => {
           console.log(results)
+          showCurrentTeam()
         })
       // removeFromMenu(name, menu)
       console.log(event.target.parentNode.classList[1])
