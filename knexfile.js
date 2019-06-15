@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       host: 'localhost',
       port: 3306,
-      user: 'nodeUser',
+      user: 'newuser',
       password: '',
       database: 'soccer_db',
       debug: ['ComQueryPacket', 'RowDataPacket']
@@ -18,7 +18,7 @@ module.exports = {
     connection: {
       host: 'localhost',
       port: 3306,
-      user: 'nodeUser',
+      user: 'newuser',
       password: '',
       database: 'testdb',
       debug: ['ComQueryPacket', 'RowDataPacket']
@@ -30,7 +30,7 @@ module.exports = {
     connection: {
       host: process.env.DATABASE_URL,
       port: 3306,
-      user: 'nodeUser',
+      user: 'newuser',
       password: '',
       database: 'soccer_db'
     }

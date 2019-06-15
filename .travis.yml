@@ -8,3 +8,11 @@ cache:
     - node_modules
 before_install:
   - mysql -e 'CREATE DATABASE testdb;'
+env:
+  global:
+    - describe
+test:
+  adapter: mysql12
+  database: testdb
+  username: travis
+  encoding: utf8
