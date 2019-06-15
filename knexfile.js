@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       host: 'localhost',
       port: 3306,
-      user: 'newuser',
+      user: 'nodeUser',
       password: '',
       database: 'soccer_db',
       debug: ['ComQueryPacket', 'RowDataPacket']
@@ -18,7 +18,7 @@ module.exports = {
     connection: {
       host: 'localhost',
       port: 3306,
-      user: 'newuser',
+      user: 'nodeUser',
       password: '',
       database: 'testdb',
       debug: ['ComQueryPacket', 'RowDataPacket']
@@ -26,13 +26,13 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'mysql',
     connection: {
-      host: process.env.DATABASE_URL,
+      host: process.env.JAWSDB_URL,
       port: 3306,
-      user: 'newuser',
-      password: '',
-      database: 'soccer_db'
+      user: 'gq4k2wlnd8mhqib5',
+      password: 'gpvaqckh6wj70nsm',
+      database: 'k3fghfef366f3jb2'
     }
   }
 
