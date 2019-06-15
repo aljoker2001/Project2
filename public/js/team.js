@@ -34,7 +34,6 @@ function createNewRow (players) {
        <tr><td><img src="${players.image}" height="115px" width="100px" class="rounded"> ${players.name}</td>
        <td>${players.jersey_number}</td>
        <td>${players.position}</td>
-       <td>${players.games_played}</td>
        <td>${players.mins}</td>
        <td>${players.goals}</td>
        <td>${players.assists}</td>
