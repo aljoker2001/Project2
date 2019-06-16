@@ -1,8 +1,11 @@
 # Project2
 This app will allow coaches to choose their team members from the existing bench of players and give weather information for the location and date for which they are scheduling.  Parents are able to register their child and view the team's statistics, which will be held in our SQL database.
 
+## Live Link
+https://raging-wombat.herokuapp.com/
+
 ## APIs
-- generic weather api (TBD)
+- apixu weather forecasting API.
 
 ## Functionality
 - POST: add new players
